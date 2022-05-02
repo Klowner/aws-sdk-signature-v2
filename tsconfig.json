@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "downlevelIteration": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "lib": ["ES2015", "DOM"],
+    "incremental": true,
+    "preserveConstEnums": true,
+    "useUnknownInCatchVariables": false,
+    "baseUrl": ".",
+    "rootDir": "src",
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules/"],
+  "include": ["src/"]
+}
