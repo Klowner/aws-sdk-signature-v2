@@ -1,6 +1,6 @@
 # SignatureV2 for S3Client
 
-Amazon removed support for signature v2 support in AWS SDK for JavaScript v3 since it's now mostly deprecated across AWS infrastructure.
+Amazon removed support for signature v2 support in [AWS SDK for JavaScript v3](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html) since it's now mostly deprecated across AWS infrastructure.
 Unfortunately, with the widespread adoption of S3 protocols, the need for less secure (but much computationally lighter) v2 signing
 is still desirable.
 
