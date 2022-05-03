@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "lib": ["es5", "es2015.promise"],
+    "lib": ["es5", "es2015.promise", "dom"],
     "outDir": "dist-es",
     "importHelpers": true,
     "module": "esnext",

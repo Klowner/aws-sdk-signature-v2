@@ -6,6 +6,7 @@
     "build:es": "tsc -p tsconfig.es.json",
     "build:types": "tsc -p tsconfig.types.json",
     "build:types:downlevel": "downlevel-dts dist-types dist-types/ts3.4",
+    "test": "jest",
     "clean": "rimraf ./dist-* && rimraf *.tsbuildinfo"
   },
   "main": "./dist-cjs/index.js",
@@ -19,19 +20,22 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@aws-crypto/sha1-browser": "*",
     "@aws-sdk/protocol-http": "*",
-    "@aws-sdk/querystring-builder": "*",
     "@aws-sdk/signature-v4": "^3.78.0",
-    "@aws-sdk/types": "*",
+    "@aws-sdk/util-base64-browser": "*",
+    "@aws-sdk/util-base64-node": "*",
     "@aws-sdk/util-middleware": "*",
     "tslib": "^2.4.0"
   },
   "devDependencies": {
-    "@aws-sdk/util-base64-browser": "*",
-    "@aws-sdk/util-base64-node": "*",
+    "@aws-sdk/types": "*",
+    "@types/jest": "^27.5.0",
     "concurrently": "^7.1.0",
     "downlevel-dts": "^0.10.0",
+    "jest": "^28.0.3",
     "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.0",
     "typescript": "^4.6.4"
   },
   "typesVersions": {
