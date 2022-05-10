@@ -162,11 +162,11 @@ function prepareQuery(
     .join('&');
 }
 
-function tryExtractVirtualHostBucket(
-  request: Readonly<HttpRequest>,
+export function tryExtractVirtualHostBucket(
+  hostname: Readonly<string>,
 ): string|null {
   // grab <bucket>.s3.whatever.com
-  const match = /^([^\.]+)\.s3\..*/.exec(request.hostname);
+  const match = /^([^\.]+)\.(.*)/.exec(hostname);
   if (match) {
     return match[1];
   }
@@ -178,7 +178,7 @@ function canonicalizedResource(
 ): string {
   const [path, querystring] = request.path.split('?');
   let resource = '';
-  const virtualHostedBucket = tryExtractVirtualHostBucket(request);
+  const virtualHostedBucket = tryExtractVirtualHostBucket(request.hostname);
   if (virtualHostedBucket) {
     resource += '/' + virtualHostedBucket;
   }
